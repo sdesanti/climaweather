@@ -1,0 +1,259 @@
+/* Variables CSS para facilitar la gestión de colores y tamaños */
+:root {
+    --primary-color: #4facfe; /* Azul claro */
+    --secondary-color: #00f2fe; /* Azul turquesa */
+    --accent-color: #88D18A; /* Verde suave para temperaturas */
+    --text-color: #333;
+    --light-text-color: #555;
+    --placeholder-color: #888;
+    --bg-card-color: #fff;
+    --border-color: #eee;
+    --error-color: #dc3545;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --border-radius-main: 15px;
+    --border-radius-elements: 8px;
+    --spacing-medium: 25px;
+    --spacing-small: 15px;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Degradado más moderno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6; /* Mejora la legibilidad */
+    overflow-x: hidden; /* Evita el scroll horizontal en móviles */
+}
+
+.weather-app {
+    background-color: var(--bg-card-color);
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 10px 30px var(--shadow-medium); /* Sombra más pronunciada y suave */
+    text-align: center;
+    width: 90%;
+    max-width: 500px; /* Aumentamos ligeramente el max-width */
+    margin: 20px; /* Margen para pantallas más pequeñas */
+    box-sizing: border-box; /* Incluye padding y border en el width */
+    position: relative; /* Para posibles animaciones o pseudo-elementos */
+    overflow: hidden; /* Asegura que nada se desborde del borde */
+}
+
+h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-medium);
+    font-weight: 700; /* Más robusto */
+    font-size: 2.5em; /* Un poco más grande */
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row; /* Por defecto en fila */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    gap: 10px; /* Espacio entre elementos */
+    margin-bottom: var(--spacing-medium);
+    justify-content: center; /* Centra los elementos */
+    align-items: stretch; /* Estira los elementos para que tengan la misma altura */
+}
+
+.search-box input[type="text"] {
+    flex: 3; /* Ocupa más espacio que los botones */
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-elements);
+    font-size: 1.05em; /* Ligeramente más grande */
+    outline: none; /* Quita el contorno feo al enfocar */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    min-width: 180px; /* Asegura un ancho mínimo para el input */
+}
+
+.search-box input[type="text"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2); /* Sombra suave al enfocar */
+}
+
+.search-box button {
+    flex: 1; /* Los botones ocupan el espacio restante */
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius-elements);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600; /* Texto más bold */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex; /* Para centrar el ícono y texto */
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre ícono y texto */
+    min-width: 120px; /* Ancho mínimo para botones */
+}
+
+.search-box button:hover {
+    transform: translateY(-2px); /* Efecto hover sutil */
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+#search-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#search-btn:hover {
+    background-color: #3a97ed; /* Un tono más oscuro */
+}
+
+#location-btn {
+    background-color: #6c757d; /* Gris más neutral */
+    color: white;
+}
+
+#location-btn:hover {
+    background-color: #5a6268;
+}
+
+.weather-info {
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-medium);
+    min-height: 180px; /* Un poco más de espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espacio entre elementos de información */
+}
+
+.weather-info h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5em; /* Más grande */
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.weather-info p {
+    font-size: 1.1em;
+    margin: 4px 0; /* Menos margen para p */
+    color: var(--light-text-color);
+}
+
+.weather-info .temperature {
+    font-family: var(--font-heading);
+    font-size: 4em; /* Gran tamaño para la temperatura */
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 10px 0;
+    letter-spacing: -1px; /* Ajuste para que se vea más compacto */
+}
+
+.weather-info .description {
+    font-size: 1.3em; /* Más grande */
+    font-style: normal; /* Quita itálicas si no son necesarias */
+    color: var(--light-text-color);
+    margin-bottom: var(--spacing-small);
+    display: flex; /* Para alinear el ícono y el texto */
+    align-items: center;
+    gap: 8px;
+}
+
+.weather-info .description img {
+    width: 60px; /* Tamaño del ícono */
+    height: 60px;
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+}
+
+.error-message {
+    color: var(--error-color);
+    margin-top: var(--spacing-small);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.placeholder-text {
+    color: var(--placeholder-color);
+    font-style: italic;
+    padding: 20px; /* Un poco de padding */
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+/* Responsividad Avanzada con Media Queries */
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+/* Tabletas y pantallas medianas (600px a 900px) */
+@media (max-width: 900px) {
+    .weather-app {
+        max-width: 480px;
+        padding: 25px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    .weather-info .temperature {
+        font-size: 3.8em;
+    }
+    .weather-info .description {
+        font-size: 1.2em;
+    }
+}
+
+/* Teléfonos y pantallas pequeñas (hasta 600px) */
+@media (max-width: 600px) {
+    .weather-app {
+        width: 95%; /* Ocupa más ancho en pantallas muy pequeñas */
+        margin: 15px;
+        padding: 20px;
+        border-radius: 10px; /* Bordes un poco menos redondeados */
+    }
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .search-box {
+        flex-direction: column; /* Apila los elementos en pantallas muy pequeñas */
+        gap: 8px;
+    }
+    .search-box input[type="text"],
+    .search-box button {
+        width: 100%; /* Ocupan todo el ancho disponible */
+        min-width: unset; /* Reinicia el min-width */
+        font-size: 0.95em;
+    }
+    .search-box button {
+        padding: 10px 15px;
+    }
+    .weather-info {
+        padding-top: 20px;
+        min-height: 160px;
+    }
+    .weather-info h2 {
+        font-size: 2em;
+    }
+    .weather-info .temperature {
+        font-size: 3.5em;
+    }
+    .weather-info .description {
+        font-size: 1.1em;
+    }
+    .weather-info .description img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Ajustes para paisajes de teléfonos (horizontal) */
+@media (max-height: 500px) and (max-width: 900px) {
+    body {
+        align-items: flex-start; /* Evita que el contenido se comprima demasiado */
+        padding: 20px 0;
+    }
+    .weather-app {
+        margin: auto; /* Centra horizontalmente */
+    }
+}

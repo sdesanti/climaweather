@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Clima - Moderno y Responsivo</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="weather-app">
+        <h1>Climaweather</h1>
+        <h3>Tu app amiga para salir de casa preparado</h3>
+
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Ej: Santiago, Londres" aria-label="Ingresa el nombre de la ciudad para buscar el clima">
+            <button id="search-btn" aria-label="Buscar clima por ciudad"><i class="fas fa-search"></i> Buscar</button>
+            <button id="location-btn" aria-label="Buscar clima por mi ubicación actual"><i class="fas fa-map-marker-alt"></i> Mi Ubicación</button>
+        </div>
+
+        <div id="weather-info" class="weather-info">
+            <p class="placeholder-text">Ingresa una ciudad o usa tu ubicación para ver el clima actual.</p>
+        </div>
+
+        <p class="error-message" id="error-message" role="alert" aria-live="polite"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
