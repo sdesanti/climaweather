@@ -1,6 +1,6 @@
 # climaweather
 App para consultar el estado actual del clima
-☀️ Visualizador de Clima Moderno y Responsivo
+☀️ Visualizador de Clima
 
 Una aplicación web interactiva y moderna para visualizar el clima actual de cualquier ciudad del mundo, o obtenerlo directamente desde tu ubicación actual. Diseñada con un enfoque "mobile-first", ofrece una experiencia de usuario fluida y visualmente atractiva en cualquier dispositivo.
 
