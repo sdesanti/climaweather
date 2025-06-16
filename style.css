@@ -1,8 +1,8 @@
 /* Variables CSS para facilitar la gestión de colores y tamaños */
 :root {
-    --primary-color: #4facfe; /* Azul claro */
-    --secondary-color: #00f2fe; /* Azul turquesa */
-    --accent-color: #88D18A; /* Verde suave para temperaturas */
+    --primary-color: #4facfe; 
+    --secondary-color: #00f2fe; 
+    --accent-color: #88D18A; 
     --text-color: #333;
     --light-text-color: #555;
     --placeholder-color: #888;
@@ -21,83 +21,83 @@
 
 body {
     font-family: var(--font-body);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Degradado más moderno */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     color: var(--text-color);
-    line-height: 1.6; /* Mejora la legibilidad */
-    overflow-x: hidden; /* Evita el scroll horizontal en móviles */
+    line-height: 1.6; 
+    overflow-x: hidden;
 }
 
 .weather-app {
     background-color: var(--bg-card-color);
     padding: var(--spacing-medium);
     border-radius: var(--border-radius-main);
-    box-shadow: 0 10px 30px var(--shadow-medium); /* Sombra más pronunciada y suave */
+    box-shadow: 0 10px 30px var(--shadow-medium);
     text-align: center;
     width: 90%;
-    max-width: 500px; /* Aumentamos ligeramente el max-width */
-    margin: 20px; /* Margen para pantallas más pequeñas */
-    box-sizing: border-box; /* Incluye padding y border en el width */
-    position: relative; /* Para posibles animaciones o pseudo-elementos */
-    overflow: hidden; /* Asegura que nada se desborde del borde */
+    max-width: 500px; 
+    margin: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+    overflow: hidden;
 }
 
 h1 {
     font-family: var(--font-heading);
     color: var(--primary-color);
     margin-bottom: var(--spacing-medium);
-    font-weight: 700; /* Más robusto */
-    font-size: 2.5em; /* Un poco más grande */
+    font-weight: 700; 
+    font-size: 2.5em;
 }
 
 .search-box {
     display: flex;
-    flex-direction: row; /* Por defecto en fila */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-    gap: 10px; /* Espacio entre elementos */
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 10px; 
     margin-bottom: var(--spacing-medium);
-    justify-content: center; /* Centra los elementos */
-    align-items: stretch; /* Estira los elementos para que tengan la misma altura */
+    justify-content: center; 
+    align-items: stretch;
 }
 
 .search-box input[type="text"] {
-    flex: 3; /* Ocupa más espacio que los botones */
+    flex: 3; 
     padding: 12px 15px;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-elements);
-    font-size: 1.05em; /* Ligeramente más grande */
-    outline: none; /* Quita el contorno feo al enfocar */
+    font-size: 1.05em; 
+    outline: none; 
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    min-width: 180px; /* Asegura un ancho mínimo para el input */
+    min-width: 180px; 
 }
 
 .search-box input[type="text"]:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2); /* Sombra suave al enfocar */
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2); 
 }
 
 .search-box button {
-    flex: 1; /* Los botones ocupan el espacio restante */
+    flex: 1; 
     padding: 12px 20px;
     border: none;
     border-radius: var(--border-radius-elements);
     cursor: pointer;
     font-size: 1em;
-    font-weight: 600; /* Texto más bold */
+    font-weight: 600; 
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    display: flex; /* Para centrar el ícono y texto */
+    display: flex; 
     align-items: center;
     justify-content: center;
-    gap: 8px; /* Espacio entre ícono y texto */
-    min-width: 120px; /* Ancho mínimo para botones */
+    gap: 8px;
+    min-width: 120px; 
 }
 
 .search-box button:hover {
-    transform: translateY(-2px); /* Efecto hover sutil */
+    transform: translateY(-2px); 
     box-shadow: 0 4px 10px var(--shadow-light);
 }
 
@@ -107,11 +107,11 @@ h1 {
 }
 
 #search-btn:hover {
-    background-color: #3a97ed; /* Un tono más oscuro */
+    background-color: #3a97ed; 
 }
 
 #location-btn {
-    background-color: #6c757d; /* Gris más neutral */
+    background-color: #6c757d; 
     color: white;
 }
 
@@ -122,17 +122,17 @@ h1 {
 .weather-info {
     border-top: 1px solid var(--border-color);
     padding-top: var(--spacing-medium);
-    min-height: 180px; /* Un poco más de espacio */
+    min-height: 180px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px; /* Espacio entre elementos de información */
+    gap: 8px; 
 }
 
 .weather-info h2 {
     font-family: var(--font-heading);
-    font-size: 2.5em; /* Más grande */
+    font-size: 2.5em; 
     margin-bottom: 5px;
     color: var(--text-color);
     font-weight: 600;
@@ -140,33 +140,33 @@ h1 {
 
 .weather-info p {
     font-size: 1.1em;
-    margin: 4px 0; /* Menos margen para p */
+    margin: 4px 0; 
     color: var(--light-text-color);
 }
 
 .weather-info .temperature {
     font-family: var(--font-heading);
-    font-size: 4em; /* Gran tamaño para la temperatura */
+    font-size: 4em; 
     font-weight: 700;
     color: var(--accent-color);
     margin: 10px 0;
-    letter-spacing: -1px; /* Ajuste para que se vea más compacto */
+    letter-spacing: -1px; 
 }
 
 .weather-info .description {
-    font-size: 1.3em; /* Más grande */
-    font-style: normal; /* Quita itálicas si no son necesarias */
+    font-size: 1.3em; 
+    font-style: normal; 
     color: var(--light-text-color);
     margin-bottom: var(--spacing-small);
-    display: flex; /* Para alinear el ícono y el texto */
+    display: flex; 
     align-items: center;
     gap: 8px;
 }
 
 .weather-info .description img {
-    width: 60px; /* Tamaño del ícono */
+    width: 60px; 
     height: 60px;
-    vertical-align: middle; /* Alinea verticalmente con el texto */
+    vertical-align: middle; 
 }
 
 .error-message {
@@ -179,7 +179,7 @@ h1 {
 .placeholder-text {
     color: var(--placeholder-color);
     font-style: italic;
-    padding: 20px; /* Un poco de padding */
+    padding: 20px; 
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------- */
@@ -206,23 +206,23 @@ h1 {
 /* Teléfonos y pantallas pequeñas (hasta 600px) */
 @media (max-width: 600px) {
     .weather-app {
-        width: 95%; /* Ocupa más ancho en pantallas muy pequeñas */
+        width: 95%; 
         margin: 15px;
         padding: 20px;
-        border-radius: 10px; /* Bordes un poco menos redondeados */
+        border-radius: 10px; 
     }
     h1 {
         font-size: 2em;
         margin-bottom: 20px;
     }
     .search-box {
-        flex-direction: column; /* Apila los elementos en pantallas muy pequeñas */
+        flex-direction: column; 
         gap: 8px;
     }
     .search-box input[type="text"],
     .search-box button {
-        width: 100%; /* Ocupan todo el ancho disponible */
-        min-width: unset; /* Reinicia el min-width */
+        width: 100%; 
+        min-width: unset; 
         font-size: 0.95em;
     }
     .search-box button {
